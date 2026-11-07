@@ -28,22 +28,22 @@ const navigationLinks = [
 const path = Astro.url.pathname;
 ---
 
-<header class="header sticky top-0 z-10 bg-white flex h-[var(--header-h)] items-center justify-between p-1 md:p-4 shadow-md">
-    <a href="/" class="flex">
+<header class="header sticky top-0 z-10 bg-white flex h-[var(--header-h)] justify-between p-1 shadow-md">
+    <a href="/" class="flex mt-2 ml-2 mb-3 lg:mb-0">
         <Image
             src={rainbowFernLogo}
             alt="Rainbowfern logo"
-            class="block mt-2 ml-1 mr-2 md:mt-0 md:ml-0 max-w-[20px] max-h-[20px] md:max-w-[32px] md:max-h-[32px]"
+            class="block mt-2 ml-1 mr-2 max-w-[20px] max-h-[20px]"
         />
 
         <h1 class="block mt-2 mr-2 text-s md:text-base">Rainbowfern.com</h1>
     </a>
 
     <!-- Desktop Navigation Menu -->
-    <nav id="desktop-menu" class="flex">
+    <nav id="desktop-menu" class="hidden md:flex">
         {navigationLinks.map(({ title, to }: { title: string; to: string }) => (
             <a
-                class="text-xs md:text-base block px-1 py-3 md:px-2 hover:text-gray-400 hover:underline"
+                class="text-xs md:text-base block px-1 py-3 mb-0 hover:text-gray-400 hover:underline"
                 href={to}
             >
                 {title}
@@ -69,7 +69,7 @@ const path = Astro.url.pathname;
     id="mobile-menu"
     popover="auto"
     aria-label="Main"
-    class="bg-emerald-900 text-emerald-50 shadow-2xl"
+    class="bg-gray-900 text-gray-50 shadow-2xl"
 >
     <ul class="flex flex-col gap-1">
         {navigationLinks.map((link) => (
@@ -77,7 +77,7 @@ const path = Astro.url.pathname;
                 <a
                     href={link.to}
                     aria-current={path === link.to ? "page" : undefined}
-                    class="block rounded-md px-4 py-3 text-lg hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-300 aria-[current=page]:bg-emerald-700 aria-[current=page]:font-semibold aria-[current=page]:text-amber-300"
+                    class="block rounded-md px-4 py-3 text-lg hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-gray-300 aria-[current=page]:bg-gray-700 aria-[current=page]:font-semibold aria-[current=page]:text-white"
                 >
                     {link.title}
                 </a>
