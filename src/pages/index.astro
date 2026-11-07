@@ -1,7 +1,7 @@
 ---
-import { Image } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
-import ServicesHero from '../components/services_hero.astro';
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import ServicesHero from "../components/services_hero.astro";
 import AboutHeroImage from "../assets/AstridLooktoSide.webp";
 ---
 
@@ -10,15 +10,26 @@ import AboutHeroImage from "../assets/AstridLooktoSide.webp";
         <div class="">
             <h1 class="text-3xl font-semibold pb-8">Rainbow Fern Consulting</h1>
             <div class="">
-                <Image 
-                    class="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg lg:max-w-[300px]" 
+                <Image
+                    class="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg lg:max-w-[300px]"
                     alt="I'm Astrid, founder of Rainbowfern Consulting."
-                    src={AboutHeroImage} 
-                    />
-                <p class="mb-5 text-sm">Hi! I&apos;m Astrid (I also go by Alex), founder of Rainbow Fern consulting.</p>
-                <p class="mb-5 text-sm">I have worked in the software field for the last 15+ years working up the corp ladder from intern to architect.</p>
-                <p class="mb-5 text-sm">Now, I am focusing on taking on remote projects, mentoring and helping develop amazing test automation suites.</p>
-                <p class="pb-5 text-sm">Take a look below at some recent projects, or details on what I offer as services.</p>
+                    src={AboutHeroImage}
+                />
+                <p class="mb-5 text-sm">
+                    Hi! I&apos;m Astrid, founder of Rainbow Fern consulting.
+                </p>
+                <p class="mb-5 text-sm">
+                    I have worked in the software field for the last 15+ years
+                    working up the corp ladder from intern to architect.
+                </p>
+                <p class="mb-5 text-sm">
+                    Now, I am focusing on taking on remote projects, mentoring
+                    and helping develop amazing test automation suites.
+                </p>
+                <p class="pb-5 text-sm">
+                    Take a look below at some recent projects, or details on
+                    what I offer as services.
+                </p>
                 <p class="clear-left md:clear-right size-0">&nbsp;</p>
             </div>
         </div>
@@ -28,17 +39,26 @@ import AboutHeroImage from "../assets/AstridLooktoSide.webp";
             <div class="flex gap-0">
                 <div class="w-1/3">
                     <h3 class="text-sm font-bold mb-2">Portfolio Website</h3>
-                    <p class="text-xs text-gray-600 pr-5">This site itself. Building out a new professional portfolio website.</p>
+                    <p class="text-xs text-gray-600 pr-5">
+                        This site itself. Building out a new professional
+                        portfolio website.
+                    </p>
                 </div>
 
                 <div class="w-1/3">
                     <h3 class="text-sm font-bold mb-2">Receipt Parser</h3>
-                    <p class="text-xs text-gray-600 pr-5">A series of python scripts and integration with AI models to parse out receipts for budgeting.</p>
+                    <p class="text-xs text-gray-600 pr-5">
+                        A series of python scripts and integration with AI
+                        models to parse out receipts for budgeting.
+                    </p>
                 </div>
 
                 <div class="w-1/3">
                     <h3 class="text-sm font-bold mb-2">Statement Summarizer</h3>
-                    <p class="text-xs text-gray-600 pr-5">A set of python scripts to extract data from bank statements and summarize.</p>
+                    <p class="text-xs text-gray-600 pr-5">
+                        A set of python scripts to extract data from bank
+                        statements and summarize.
+                    </p>
                 </div>
             </div>
             <a
@@ -48,12 +68,11 @@ import AboutHeroImage from "../assets/AstridLooktoSide.webp";
                 See My Projects
             </a>
         </section>
-    
+
         <div class="w-auto">
             <div class="border-gray-200 border-t p-4">&nbsp;</div>
         </div>
 
         <ServicesHero />
     </div>
-
 </Layout>
